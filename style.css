@@ -1,0 +1,311 @@
+.bar{
+    position: relative;
+}
+body{
+    background-image: url(./background_image.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon{
+    /* アイコンの配置 */
+    width: 300px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(0,-50%);
+    /* アイコンのフォントデザイン */
+    font-size: 36px;
+    text-decoration: underline;
+}
+nav{
+    height: 110px;
+    display: flex;
+    /* 子要素のための指定 */
+    justify-content: space-around;
+    padding-left: 50%;
+    padding-right: 10%;
+    text-decoration: underline;
+}
+nav > a{
+    /* ナビゲーションを上下中央揃え */
+    display: flex;
+    align-items: center;
+    /* ナビゲーションのフォントサイズ指定 */
+    font-size: 20px;
+}
+.firstView{
+    /* firstView画像の両横余白 */
+    padding: 0 10vw;
+    /* 子要素のための指定 */
+    position: relative;
+}
+.firstView > span{
+    /* 要素の配置と向きの指定 */
+    position: absolute;
+    bottom: 10%;
+    left: 3vw;
+    writing-mode: vertical-rl;
+    transform:rotate(180deg);
+    /* フォントデザインの指定 */
+    font-size: 40px;
+    color: #979797;
+}
+.firstView > a > div{
+    /* インスタアイコンとtiktokアイコンの大きさと配置の指定 */
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 3vw;
+}
+.firstView > a > .line{
+    /* インスタグラムアイコンの配置指定 */
+    top:0;
+    /* 背景設定 */
+    background-image: url(./line.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+.firstView > a > .instagram{
+    /* tiktokアイコンの配置指定 */
+    top:60px;
+    /* 背景設定 */
+    background-image: url(./instagram.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-color: white;
+}
+.main-img{
+    /* 背景画像の大きさ指定 */
+    height: 600px;
+    /* 背景画像の指定 */
+    background-image: url(./firstView/download_1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.nail-content{
+    padding: 0 20px
+
+}
+.nail-container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+[class^="nail-item"]{
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+}
+.nail-menu > h2,.nail-map > h2,.nail-content{
+    /* 見出しのデザインと余白の設定 */
+    margin-top: 80px;
+    font-size: 28px;
+    text-align: center;
+}
+.nail-menu > div{
+    /* メニュー画像と説明を横に並べる */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.nail-menu > div > .description{
+    margin-top: 50px;
+    padding: 0 10px;
+    width: 600px;
+    height: 700px;
+    border: solid 1px black;
+    background-color: rgb(255, 248, 255);
+    overflow-y: auto;
+}
+.nail-menu > div > .description td,.nail-menu > div > .description th{
+    border: solid 1px black;
+    padding: 10px;
+    vertical-align: middle;
+}
+.nail-menu > div > .description th{
+    width: 100px;
+}
+.nail-menu > div > .description table{
+    margin: 50px auto 0 auto;
+}
+.nail-menu >div> .menu{
+    /* 要素の大きさ設定 */
+    height: 700px;
+    width: 600px;
+    /* 配置の設定 */
+    margin-top: 50px;
+    /* 背景設定 */
+    background-image: url(./nail_menu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(255, 248, 255);
+    /* ボーダーをつける */
+    border: solid black 1px;
+}
+.nail-map > .map{
+    display: block;
+    height: 450px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+.nail-map > p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer-top{
+    font-size: 24px;
+    text-decoration: underline;
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgb(255, 240, 255);
+    margin-top: 50px;
+}
+@media (max-width: 1000px) {
+    .nail-menu > div{
+        /* メニュー画像と説明を横に並べる */
+        display: block;
+    }
+    .nail-menu > div > .menu,.nail-menu > div > .description{
+        margin: 50px auto 0 auto;
+    }
+    .nail-map > .map{
+        width: 700px;
+    }
+}
+@media (max-width: 830px) {
+    .icon{
+        /* アイコンをナビゲーションの上に配置するためにpositionとtransformを初期値に戻す */
+        position: static;
+        transform: translate(0,0);
+        /* アイコンを中央に配置 */
+        text-align: center;
+        /* アイコンの高さと幅の設定 */
+        width: 100vw;
+        height: 45px;
+    }
+    nav{
+        /* ナビゲーションの高さを調整（減らす） */
+        height: 35px;
+        /* ナビゲーションのパディングを０にする */
+        padding: 0;
+    }
+    .firstView{
+        /* firstview画像の両横の余白をなくす */
+        padding: 0;
+    }
+    .firstView > a > .line{
+        /* インスタグラムのアイコンを少し下に下げる */
+        top:30px;
+    }
+    .firstView > a > .instagram{
+        /* tiktokのアイコンを少し下に下げる */
+        top:90px;
+    }
+    .nail-map > .map{
+        width: 80%;
+        height: 280px;
+    }
+}
+@media (max-width: 670px) {
+    .icon{
+        /* アイコンを少し小さく*/
+        font-size: 24px;
+        padding-top: 6px;
+    }
+    header{
+        /* ヘッダーを浮かせて透けさせる */
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.549);
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .firstView > span{
+        /* 縦文字デザインのフォントサイズを下げる */
+        font-size: 28px;
+    }
+    .main-img{
+        /* firstview画像の高さを少し小さく */
+        height: 500px;
+    }
+    .firstView > a > .line{
+        /* インスタグラムのアイコンを少し下に下げる */
+        top: 100px;
+        width: 35px;
+        height: 35px;
+    }
+    .firstView > a > .instagram{
+        /* tiktokのアイコンを少し下に下げる */
+        top:145px;
+        width: 35px;
+        height: 35px;
+    }
+    .nail-menu > div > .menu,.nail-menu > div > .description{
+        width: 400px;
+        height: 500px;
+    }
+}
+@media (max-width: 540px) {
+    .main-img{
+        /* firstview画像の高さを少し小さく */
+        height: 300px;
+    }
+    .firstView > span{
+        /* 縦文字デザインのフォントサイズを下げる */
+        font-size: 20px;
+    }
+    [class^="nail-item"]{
+        width: 110px;
+        height: 110px;
+    }
+}
+@media (max-width: 420px) {
+    .nail-menu > div > .menu,.nail-menu > div > .description{
+        width: 360px;
+        height: 500px;
+    }
+}
+@media (max-width: 380px) {
+    .nail-menu > div > .menu,.nail-menu > div > .description{
+        width: 90%;
+        height: 400px;
+    }
+}
+/* ギャラリーの選択 */
+.nail-item-1{
+    background-image: url(./gallery/nail_1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.nail-item-2{
+    background-image: url(./gallery/nail_2.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.nail-item-3{
+    background-image: url(./gallery/nail_3.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.nail-item-4{
+    background-image: url(./gallery/nail_4.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.nail-item-5{
+    background-image: url(./gallery/nail_5.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.nail-item-6{
+    background-image: url(./gallery/nail_6.jpg);
+    background-size: cover;
+    background-position: center center;
+}
